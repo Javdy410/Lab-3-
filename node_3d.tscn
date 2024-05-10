@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyaqse5n05kta"]
+
+[ext_resource type="Texture2D" uid="uid://bngwxsua0112l" path="res://Screenshot 2024-05-09 at 9.14.14 PM.png" id="2_84d76"]
+[ext_resource type="Script" path="res://movement.gd" id="2_g8smm"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-0.786234, 0, -0.617928, 0, 1, 0, 0.617928, 0, -0.786234, 1.43383, 5.10519, 2.51861)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999997, 0, 0.00239113, 0, 1, 0, -0.00239113, 0, 0.999997, -1.16915, -2.25677, 1.06327)
+size = Vector3(13.6188, 8.01642, 27.5383)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, 21.9012, 1.19662, 3.70717)
+radius = 1.18477
+height = 18.6283
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, -0.411538, -0.371364, -3.08863)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, -91.158, -50.2068, 132.525)
+polygon = PackedVector2Array(0, 0, 67.8913, -146.152, -63.195, -2.59182, -72.0319, -78.4807)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, 46.8648, 4.52037, 13.2204)
+radius = 7.28255
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, 14.7643, -23.0194, 85.0221)
+inner_radius = 5.22867
+outer_radius = 21.3904
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.956078, -0.290755, -0.0370918, 0.292001, 0.933796, 0.206788, -0.0254886, -0.208537, 0.977682, 1460.95, -250.791, 2194.26)
+light_color = Color(0.470588, 1, 1, 1)
+light_energy = 300.0
+light_indirect_energy = 200.0
+light_angular_distance = 30.0
+shadow_enabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.964956, 0.196479, -0.173945, -0.261477, 0.775876, -0.574148, 0.022152, 0.59951, 0.800061, -42.6184, -5.73103, 65.8562)
+pixel_size = 0.03
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_84d76")
+script = ExtResource("2_g8smm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, -1.45564e-08, 0, 1, 0, -1.45564e-08, 0, 1, -52.4713, 5.59425, 110.579)
